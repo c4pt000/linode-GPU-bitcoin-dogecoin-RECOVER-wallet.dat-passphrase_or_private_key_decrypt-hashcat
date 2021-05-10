@@ -1,3 +1,8 @@
+
+
+python bitcoin2john.py wallet.dat > hash.txt
+
+
 # password_cracking_rule
 
 This is a supporting repo for blog post https://www.notsosecure.com/one-rule-to-rule-them-all/
