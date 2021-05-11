@@ -73,11 +73,18 @@ source /root/.bashrc
 
 ```
 ```
+cd /opt
 yum install p7zip p7zip-plugins -y
 
-
+git clone https://github.com/c4pt000/linode-GPU-bitcoin-wallet.dat-passphrase_decrypt-hashcat
+cd linode-GPU-bitcoin-wallet.dat-passphrase_decrypt-hashcat
 wget https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz
 gunzip rockyou.txt.gz
+sh hashcat.sh
+
+
+
+
 
 
 crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example
