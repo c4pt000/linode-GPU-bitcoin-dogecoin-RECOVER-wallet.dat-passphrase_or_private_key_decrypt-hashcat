@@ -55,13 +55,16 @@ source /etc/profile.d/cuda.sh
   make -j24
   ./deviceQuery 
 
-
+```
+```
 yum install p7zip p7zip-plugins -y
-```
 
-```
+
+wget https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz
+gunzip rockyou.txt.gz
+
 python bitcoin2john.py wallet.dat > hash.txt
-hashcat --stdout wordlist0.txt -r OneRuleToRuleThemAll.rule | hashcat -m 11300 hash.txt
+hashcat --stdout rockyou.txt -r OneRuleToRuleThemAll.rule | hashcat -m 11300 hash.txt
 ```
 
 
