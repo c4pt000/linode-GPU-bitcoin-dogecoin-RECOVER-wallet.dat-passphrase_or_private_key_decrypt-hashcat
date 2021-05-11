@@ -17,9 +17,11 @@ sed -i 's/GRUB_ENABLE_BLSCFG=true/GRUB_ENABLE_BLSCFG=false/g' /etc/default/grub
 
 sleep 2s
 grub2-editenv create
-rpm -Uvh --force  kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -Uvh --force  kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -e --nodeps kernel-core kernel-modules kernel-headers kernel-devel kernel-srpm-macros kernel
+
+rpm -Uvh kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -Uvh kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -UVh kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 
 
  
