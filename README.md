@@ -17,7 +17,7 @@ rm -rf /boot/vmlinuz*
 sleep 2s
 rpm -Uvh --force  kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -Uvh --force  kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -UVh --force  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 
 
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
