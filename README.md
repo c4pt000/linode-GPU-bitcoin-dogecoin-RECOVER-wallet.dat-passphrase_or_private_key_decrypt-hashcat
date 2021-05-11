@@ -13,8 +13,8 @@ wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-cgroup-virtio/releases/
 rm -rf /boot/initramfs*
 rm -rf /boot/vmlinuz*
 
-        change -> GRUB_ENABLE_BLSCFG=true to GRUB_ENABLE_BLSCFG=false in /etc/default/grub
-
+     echo   change -> GRUB_ENABLE_BLSCFG=true to GRUB_ENABLE_BLSCFG=false in /etc/default/grub
+sleep 2s
 rpm -Uvh --force --nodeps kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -Uvh --force --nodeps kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -UVh --force --nodeps kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
