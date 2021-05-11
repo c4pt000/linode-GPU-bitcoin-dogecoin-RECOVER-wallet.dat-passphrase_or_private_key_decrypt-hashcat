@@ -51,7 +51,7 @@ chmod +x cuda_11.1.1_455.32.00_linux.run
 ./cuda_11.1.1_455.32.00_linux.run --override
 
 
-cat << EOF > /root/.bashrc
+cat << EOF >> /root/.bashrc
 if [ -z "${LD_LIBRARY_PATH}" ]; then
       LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64
     else
