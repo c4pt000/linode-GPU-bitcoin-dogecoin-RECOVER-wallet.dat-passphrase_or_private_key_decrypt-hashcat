@@ -7,7 +7,8 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/dock
 sudo dnf install docker-ce docker-ce-cli containerd.io -y
 systemctl start docker
 
-for at boot
+to enable at system boot:
+
 systemctl enable docker
 
 ```
