@@ -124,9 +124,9 @@ wordset classic kali -> rockyou.txt
 ./hashcat.bin --stdout rockyou.txt -r OneRuleToRuleThemAll.rule | ./hashcat.bin -m 11300 hash.txt
 
 RANDOM A-z0-0 
-minimum 12 characters up to 24 characters random A-z0-9
+ characters up to 24 characters random A-z0-9
 -------------------------------------------------------------
-./hashcat.bin -m 11300 hash.txt -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --increment-min 10 -w 3
+ ./hashcat.bin -m 11300 hash.txt -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment -w 3
 ```
 
 
