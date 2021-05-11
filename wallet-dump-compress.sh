@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ./bitcoin-tool \
-    --network dogecoin \
+    --network bitcoin \
     --input-type private-key \
     --input-format raw \
     --input-file key.bin \
