@@ -13,7 +13,7 @@ systemctl enable docker
 
 ```
 
-
+# custom security kernel see expSEHDsec
 
 ```
 yum install nano wget git -y
@@ -52,6 +52,7 @@ echo "SCRIPT HAS TO REBOOT FOR KERNEL CHANGES script will sleep for 10 seconds C
 sleep 10s
 
 ```
+# for nvidia + cuda accelerated drivers
 
 ```
 cd /opt
@@ -88,6 +89,8 @@ source /root/.bashrc
   ./deviceQuery 
 
 ```
+
+for hashcat current beta with GPU enabled hashing and cracking
 ```
 cd /opt
 yum install p7zip p7zip-plugins -y
@@ -125,6 +128,9 @@ minimum 10 characters up to 24 characters random A-z0-9
 -------------------------------------------------------------
 ./hashcat.bin -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --increment-min 10 | ./hashcat.bin -m 11300 hash.txt
 ```
+
+# for docker python2 bitcointools image for private key reveal with non-encrypted no passphrase wallet.dat(s)
+
 
 
 
