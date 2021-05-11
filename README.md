@@ -79,6 +79,9 @@ yum install p7zip p7zip-plugins -y
 wget https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz
 gunzip rockyou.txt.gz
 
+
+crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example
+------
 python bitcoin2john.py wallet.dat > hash.txt
 hashcat --stdout rockyou.txt -r OneRuleToRuleThemAll.rule | hashcat -m 11300 hash.txt
 ```
