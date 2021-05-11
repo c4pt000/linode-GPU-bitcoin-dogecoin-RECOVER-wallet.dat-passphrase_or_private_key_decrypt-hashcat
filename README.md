@@ -125,9 +125,11 @@ wordset classic kali -> rockyou.txt
 
 RANDOM A-z0-0 
  characters up to 24 characters random A-z0-9
+ 
+ long method usually impossible
 starting from checking a random passphrase from 15 characters up to 24 characters in length randomly
 -------------------------------------------------------------
-./hashcat.bin -m 11300 hash.txt -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --increment-min 15 --increment-max 24  -w 3
+./hashcat.bin -m 11300 hash.txt -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --increment-min 10 --increment-max 24  -w 3
 ```
 
 
