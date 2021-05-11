@@ -78,8 +78,13 @@ yum install p7zip p7zip-plugins -y
 
 git clone https://github.com/c4pt000/linode-GPU-bitcoin-wallet.dat-passphrase_decrypt-hashcat
 cd linode-GPU-bitcoin-wallet.dat-passphrase_decrypt-hashcat
+7z x hashcat-6.2.0-rc2.7z 
+cd hashcat-6.1.1/
 wget https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz
 gunzip rockyou.txt.gz
+cp -rf ../hashcat.sh .
+cp -rf ../OneRuleToRuleThemAll.rule .
+cp -rf ../bitcoin2john.py .
 sh hashcat.sh
 
 
@@ -87,8 +92,10 @@ sh hashcat.sh
 
 
 
-crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example
+crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example requires wallet.dat in same dir
 ------
+cd /opt
+
 python bitcoin2john.py wallet.dat > hash.txt
 hashcat --stdout rockyou.txt -r OneRuleToRuleThemAll.rule | hashcat -m 11300 hash.txt
 ```
