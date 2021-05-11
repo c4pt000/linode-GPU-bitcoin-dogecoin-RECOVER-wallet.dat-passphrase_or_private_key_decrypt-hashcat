@@ -6,7 +6,7 @@ wget https://download.nvidia.com/XFree86/Linux-x86_64/460.56/NVIDIA-Linux-x86_64
 yum install kernel-headers kernel-devel -y
 bash NVIDIA-Linux-x86_64-460.56.run
 
-yum install p7zip-full
+yum install p7zip p7zip-plugins -y
 ```
 
 ```
