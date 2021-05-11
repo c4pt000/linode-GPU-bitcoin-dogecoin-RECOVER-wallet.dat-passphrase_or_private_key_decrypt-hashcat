@@ -21,8 +21,7 @@ rpm -e --nodeps kernel-core kernel-modules kernel-headers kernel-devel kernel-sr
 
 rpm -Uvh kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -Uvh kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -UVh kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-
+rpm -Uvh kernel-devel_5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm 
 
  
    nano /root/.bashrc 
