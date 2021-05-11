@@ -1,4 +1,19 @@
 # requires CUDA toolkit for nvidia (fedora 34) and docker
+
+for docker
+```
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io -y
+systemctl start docker
+
+for at boot
+systemctl enable docker
+
+```
+
+
+
 ```
 yum install nano wget git -y
 
