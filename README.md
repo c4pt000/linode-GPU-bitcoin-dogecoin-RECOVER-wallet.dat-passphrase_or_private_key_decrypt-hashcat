@@ -13,7 +13,8 @@ wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-cgroup-virtio/releases/
 rm -rf /boot/initramfs*
 rm -rf /boot/vmlinuz*
 
-     echo   change -> GRUB_ENABLE_BLSCFG=true to GRUB_ENABLE_BLSCFG=false in /etc/default/grub
+sed -i 's/GRUB_ENABLE_BLSCFG=true/GRUB_ENABLE_BLSCFG=false/g' /etc/default/grub 
+
 sleep 2s
 rpm -Uvh --force  kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -Uvh --force  kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
@@ -22,6 +23,10 @@ rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 grub2-mkconfig -o /boot/grub2/grub.cfg
+
+echo "SCRIPT HAS TO REBOOT FOR KERNEL CHANGES script will sleep for 10 seconds Ctrl-C to cancel script"
+sleep 10s
+reboot
 
 yum groupinstall "C Development Tools and Libraries" -y
 wget https://download.nvidia.com/XFree86/Linux-x86_64/460.56/NVIDIA-Linux-x86_64-460.56.run
