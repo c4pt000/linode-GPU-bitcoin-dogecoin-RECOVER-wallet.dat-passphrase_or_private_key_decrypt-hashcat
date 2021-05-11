@@ -58,7 +58,7 @@ if [ -z "${LD_LIBRARY_PATH}" ]; then
         LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
      fi
      export PATH LD_LIBRARY_PATH
-     EOF
+EOF
   
   
   
