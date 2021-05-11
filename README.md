@@ -116,9 +116,16 @@ minimum 10 characters up to 24 characters random A-z0-9
 # instead of decrypting "encrypted" passphrase from wallet.dat through master key
 extract unencrypted private key for wallet funds (from unencrypted wallet.dat with no passphrase)
 
+# RUN WITH CAUTION VISIBLE PRIVATE KEYS WITH NO ENCRYPTION EXPOSE THE WALLET TO EXPORT INTO ANOTHER WALLET by
+from bitcoin-qt or dogecoin-qt (non-prune mode) debug>console
+importprivkey "private_key_here"
+
+
 where /root/.bitcoin is the location of "wallet.dat" if wallet.dat exists in /opt/wallet/wallet.dat change accordingly cp -rf wallet.dat to /opt/wallet
 ```
 docker run -it -d -v /opt/wallet:/root/.bitcoin c4pt/dump_private_key-dogecoinbitcoin
 docker exec -it <docker_vm_hash> bash
+cd /opt/bitcointools/
+sh dump_private_key.sh 
 ```
 
