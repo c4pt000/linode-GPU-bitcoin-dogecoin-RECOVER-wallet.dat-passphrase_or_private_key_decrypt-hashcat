@@ -38,6 +38,7 @@ sleep 10s
 ```
 
 ```
+cd /opt
 yum groupinstall "C Development Tools and Libraries" -y
 wget https://download.nvidia.com/XFree86/Linux-x86_64/460.56/NVIDIA-Linux-x86_64-460.56.run
 bash NVIDIA-Linux-x86_64-460.56.run
