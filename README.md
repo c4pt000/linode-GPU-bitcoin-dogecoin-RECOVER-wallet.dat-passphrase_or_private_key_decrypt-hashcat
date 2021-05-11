@@ -1,4 +1,4 @@
-# requires CUDA toolkit for nvidia
+# requires CUDA toolkit for nvidia (fedora 34)
 ```
 yum install nano wget git -y
 
