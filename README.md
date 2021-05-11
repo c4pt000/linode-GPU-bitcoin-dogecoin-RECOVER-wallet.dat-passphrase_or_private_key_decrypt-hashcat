@@ -15,9 +15,9 @@ rm -rf /boot/vmlinuz*
 
      echo   change -> GRUB_ENABLE_BLSCFG=true to GRUB_ENABLE_BLSCFG=false in /etc/default/grub
 sleep 2s
-rpm -Uvh --force --nodeps kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -Uvh --force --nodeps kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -UVh --force --nodeps kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -Uvh --force  kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -Uvh --force  kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+rpm -UVh --force  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 
 
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
