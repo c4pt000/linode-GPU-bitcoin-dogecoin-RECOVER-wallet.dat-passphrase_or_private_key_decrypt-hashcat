@@ -29,13 +29,10 @@ rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm2cpio kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm | cpio -idmv
 cp -rfv lib/modules/5.11.6-5.11.6-c4pt000-expSEHDsec/* /usr/lib/modules/5.11.6-5.11.6-c4pt000-expSEHDsec/
 depmod -a
+rm -rf lib/*
 mkinitrd /boot/initramfs-5.11.6-5.11.6-c4pt000-expSEHDsec.img 5.11.6-5.11.6-c4pt000-expSEHDsec 
 cp -rf /usr/src/kernels/5.11.6-5.11.6-c4pt000-expSEHDsec/System.map /boot/System.map
 cp -rf /usr/src/kernels/5.11.6-5.11.6-c4pt000-expSEHDsec/System.map /boot/System.map-5.11.6-5.11.6-c4pt000-expSEHDsec 
-cp -rf /boot/vmlinux-5.11.6-5.11.6-c4pt000-expSEHDsec.bz2 /boot/vmlinux-5.11.6-5.11.6-c4pt000-expSEHDsec.bz2.e
-bunzip2 /boot/vmlinux-5.11.6-5.11.6-c4pt000-expSEHDsec.bz2.e
-mv /boot/vmlinux-5.11.6-5.11.6-c4pt000-expSEHDsec.bz2.e.out /boot/vmlinux-5.11.6-5.11.6-c4pt000-expSEHDsec
-ln -sf vmlinux-5.11.6-5.11.6-c4pt000-expSEHDsec vmlinuz 
 
 
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
