@@ -111,7 +111,7 @@ sh hashcat.sh
 
 
 
-
+# passphrase enabled wallet
 
 crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example requires wallet.dat to make hash.txt in same dir
 ------
@@ -129,14 +129,11 @@ minimum 10 characters up to 24 characters random A-z0-9
 ./hashcat.bin -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --increment-min 10 | ./hashcat.bin -m 11300 hash.txt
 ```
 
+
+# wallet with no passphrase
+
 # for docker python2 bitcointools image for private key reveal with non-encrypted no passphrase wallet.dat(s)
 
-
-
-
-
-# instead of decrypting "encrypted" passphrase from wallet.dat through master key
-extract unencrypted private key for wallet funds (from unencrypted wallet.dat with no passphrase)
 
 # RUN WITH CAUTION VISIBLE PRIVATE KEYS WITH NO ENCRYPTION EXPOSE THE WALLET TO EXPORT INTO ANOTHER WALLET
 <br>
