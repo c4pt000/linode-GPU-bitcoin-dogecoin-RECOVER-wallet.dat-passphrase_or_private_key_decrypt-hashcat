@@ -116,10 +116,12 @@ minimum 10 characters up to 24 characters random A-z0-9
 # instead of decrypting "encrypted" passphrase from wallet.dat through master key
 extract unencrypted private key for wallet funds (from unencrypted wallet.dat with no passphrase)
 
-# RUN WITH CAUTION VISIBLE PRIVATE KEYS WITH NO ENCRYPTION EXPOSE THE WALLET TO EXPORT INTO ANOTHER WALLET by
+# RUN WITH CAUTION VISIBLE PRIVATE KEYS WITH NO ENCRYPTION EXPOSE THE WALLET TO EXPORT INTO ANOTHER WALLET
+<br>
 from bitcoin-qt or dogecoin-qt (non-prune mode) debug>console
+<br>
 importprivkey "private_key_here"
-
+<br>
 
 where /root/.bitcoin is the location of "wallet.dat" if wallet.dat exists in /opt/wallet/wallet.dat change accordingly cp -rf wallet.dat to /opt/wallet
 ```
