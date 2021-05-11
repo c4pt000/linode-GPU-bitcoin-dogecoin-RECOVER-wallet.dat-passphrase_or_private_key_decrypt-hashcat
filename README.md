@@ -109,3 +109,16 @@ minimum 10 characters up to 24 characters random A-z0-9
 -------------------------------------------------------------
 ./hashcat.bin -a3 -1?l?u?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --increment-min 10 | ./hashcat.bin -m 11300 hash.txt
 ```
+
+
+
+
+# instead of decrypting "encrypted" passphrase from wallet.dat through master key
+extract unencrypted private key for wallet funds (from unencrypted wallet.dat with no passphrase)
+
+where /root/.bitcoin is the location of "wallet.dat" if wallet.dat exists in /opt/wallet/wallet.dat change accordingly
+```
+docker run -it -d -v /opt/wallet/wallet.dat:/root/.bitcoin c4pt/dump_private_key-dogecoinbitcoin
+docker exec -it <docker_vm_hash> bash
+```
+
