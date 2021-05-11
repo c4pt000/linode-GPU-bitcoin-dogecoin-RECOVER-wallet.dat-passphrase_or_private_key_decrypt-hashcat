@@ -26,6 +26,9 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 yum groupinstall "C Development Tools and Libraries" -y
 wget https://download.nvidia.com/XFree86/Linux-x86_64/460.56/NVIDIA-Linux-x86_64-460.56.run
 bash NVIDIA-Linux-x86_64-460.56.run
+modprobe nvidia
+nvidia-smi
+
 
 wget https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run
 chmod +x cuda_11.1.1_455.32.00_linux.run
