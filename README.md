@@ -85,6 +85,8 @@ gunzip rockyou.txt.gz
 cp -rf ../hashcat.sh .
 cp -rf ../OneRuleToRuleThemAll.rule .
 cp -rf ../bitcoin2john.py .
+````
+requires hash.txt in same dir
 sh hashcat.sh
 
 
@@ -92,12 +94,13 @@ sh hashcat.sh
 
 
 
-crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example requires wallet.dat in same dir
+crack dogecoin master-key passphrase, or bitcoin master-key passphrase simple hashcat gpu accelerated example requires wallet.dat to make hash.txt in same dir
 ------
+```
 cd /opt
 
 python bitcoin2john.py wallet.dat > hash.txt
-hashcat --stdout rockyou.txt -r OneRuleToRuleThemAll.rule | hashcat -m 11300 hash.txt
+./hashcat.bin --stdout rockyou.txt -r OneRuleToRuleThemAll.rule | ./hashcat.bin -m 11300 hash.txt
 ```
 
 
