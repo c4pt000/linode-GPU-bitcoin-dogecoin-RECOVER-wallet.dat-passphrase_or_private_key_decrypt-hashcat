@@ -16,6 +16,7 @@ rm -rf /boot/vmlinuz*
 sed -i 's/GRUB_ENABLE_BLSCFG=true/GRUB_ENABLE_BLSCFG=false/g' /etc/default/grub 
 
 sleep 2s
+grub2-editenv create
 rpm -Uvh --force  kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -Uvh --force  kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
@@ -25,14 +26,6 @@ rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
    nano /root/.bashrc 
    source /root/.bashrc 
 
-
-rpm2cpio kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm | cpio -idmv
-cp -rfv lib/modules/5.11.6-5.11.6-c4pt000-expSEHDsec/* /usr/lib/modules/5.11.6-5.11.6-c4pt000-expSEHDsec/
-depmod -a
-rm -rf lib/*
-mkinitrd /boot/initramfs-5.11.6-5.11.6-c4pt000-expSEHDsec.img 5.11.6-5.11.6-c4pt000-expSEHDsec 
-cp -rf /usr/src/kernels/5.11.6-5.11.6-c4pt000-expSEHDsec/System.map /boot/System.map
-cp -rf /usr/src/kernels/5.11.6-5.11.6-c4pt000-expSEHDsec/System.map /boot/System.map-5.11.6-5.11.6-c4pt000-expSEHDsec 
 
 
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
