@@ -24,10 +24,12 @@ rpm -UVh  kernel-devel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 grub2-mkconfig -o /boot/grub2/grub.cfg
 
-echo "SCRIPT HAS TO REBOOT FOR KERNEL CHANGES script will sleep for 10 seconds Ctrl-C to cancel script"
+echo "SCRIPT HAS TO REBOOT FOR KERNEL CHANGES script will sleep for 10 seconds Ctrl-C to cancel script and reboot"
 sleep 10s
-reboot
 
+```
+
+```
 yum groupinstall "C Development Tools and Libraries" -y
 wget https://download.nvidia.com/XFree86/Linux-x86_64/460.56/NVIDIA-Linux-x86_64-460.56.run
 bash NVIDIA-Linux-x86_64-460.56.run
@@ -40,7 +42,7 @@ chmod +x cuda_11.1.1_455.32.00_linux.run
 ./cuda_11.1.1_455.32.00_linux.run --override
 
 
-cat << EOF > /etc/profile.d/cuda.sh
+cat << EOF > /root/.bashrc
 if [ -z "${LD_LIBRARY_PATH}" ]; then
       LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64
     else
@@ -51,7 +53,7 @@ if [ -z "${LD_LIBRARY_PATH}" ]; then
   
   
   
-source /etc/profile.d/cuda.sh 
+source /root/.bashrc 
 
  echo $PATH
  echo $LD_LIBRARY_PATH
