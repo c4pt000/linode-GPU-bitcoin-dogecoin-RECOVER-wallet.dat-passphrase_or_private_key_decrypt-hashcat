@@ -22,9 +22,10 @@ yum install nano wget git -y
 
 cd /opt
 
-wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-cgroup-virtio/releases/download/5.11.6-expSEHDsec/kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-cgroup-virtio/releases/download/5.11.6-expSEHDsec/kernel-devel_5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-cgroup-virtio/releases/download/5.11.6-expSEHDsec/kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
+wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio/releases/download/haxm-experimental/kernel-5.11.6_HAXM_expSEHDsec_c4pt000.x86_64.rpm
+wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio/releases/download/haxm-experimental/kernel-headers-5.11.6_HAXM_expSEHDsec_c4pt000.x86_64.rpm
+wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio/releases/download/haxm-experimental/kernel-devel-5.11.6_HAXM_expSEHDsec_c4pt000.x86_64.rpm
+
 
 rm -rf /boot/initramfs*
 rm -rf /boot/vmlinuz*
@@ -35,9 +36,9 @@ sleep 2s
 grub2-editenv create
 rpm -e --nodeps kernel-core kernel-modules kernel-headers kernel-devel kernel-srpm-macros kernel
 
-rpm -Uvh kernel-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -Uvh kernel-headers-5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm
-rpm -Uvh kernel-devel_5.11.6_expSEHDsec-cgroupvirtio.x86_64.rpm 
+rpm -Uvh kernel-5.11.6_HAXM_expSEHDsec_c4pt000.x86_64.rpm
+rpm -Uvh kernel-headers-5.11.6_HAXM_expSEHDsec_c4pt000.x86_64.rpm
+rpm -Uvh kernel-devel-5.11.6_HAXM_expSEHDsec_c4pt000.x86_64.rpm
 
  
    nano /root/.bashrc 
