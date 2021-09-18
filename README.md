@@ -12,7 +12,7 @@ RHEL based deployments by default, to modify enforcing to allow SSH to stay open
 policy adjustment so enforcing by default with selinux doesnt close ssh sessions from being 
 hyper-sensitive 
 ```
-https://raw.githubusercontent.com/c4pt000/radioCOIN/main/LINODE-GPU-CLUSTER-script-FEDORA-34
+https://raw.githubusercontent.com/c4pt000/radiocoin/master/BUILD_SCRIPTS/LINODE-GPU-CLUSTER-script-FEDORA-34
 
 # requires CUDA toolkit for nvidia (fedora 34) and docker
 
