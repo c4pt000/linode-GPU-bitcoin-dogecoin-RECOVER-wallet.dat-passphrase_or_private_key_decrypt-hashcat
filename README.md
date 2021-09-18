@@ -14,6 +14,12 @@ hyper-sensitive
 ```
 https://raw.githubusercontent.com/c4pt000/radiocoin/master/BUILD_SCRIPTS/LINODE-GPU-CLUSTER-script-FEDORA-34
 
+
+or
+
+https://raw.githubusercontent.com/c4pt000/radiocoin/master/BUILD_SCRIPTS/LINODE-NO_CUSTOM_KERNEL_GPU-CLUSTER-script-FEDORA-34
+
+
 # requires CUDA toolkit for nvidia (fedora 34) and docker
 
 for docker
