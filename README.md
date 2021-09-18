@@ -1,4 +1,17 @@
 # LINODE GPU CLUSTER script Fedora 34
+```
+FIX FOR SSH REMOTE TO NOT CLOSE
+sshd_config
+ClientAliveInterval 60
+
+BUT REALLY ITS SELINUX CLOSING SSH WHEN COMPILING ANYTHING FROM BEING HYPER-SENSITIVE
+with enforcing policies by default
+use setenforce 0 at your own risk to keep SSH open while compiling projects remotely
+I emailed linode support about this matter to adjust all RHEL based customer templates for new
+RHEL based deployments by default, to modify enforcing to allow SSH to stay open with a semanage
+policy adjustment so enforcing by default with selinux doesnt close ssh sessions from being 
+hyper-sensitive 
+```
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/LINODE-GPU-CLUSTER-script-FEDORA-34
 
 # requires CUDA toolkit for nvidia (fedora 34) and docker
