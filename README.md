@@ -3,6 +3,8 @@
 FIX FOR SSH REMOTE TO NOT CLOSE
 sshd_config
 ClientAliveInterval 60
+TCPKeepAlive yes
+
 
 BUT REALLY ITS SELINUX CLOSING SSH WHEN COMPILING ANYTHING FROM BEING HYPER-SENSITIVE
 with enforcing policies by default
